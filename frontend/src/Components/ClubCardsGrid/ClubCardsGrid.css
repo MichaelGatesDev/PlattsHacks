@@ -1,0 +1,12 @@
+.ClubCardsGrid-Component {}
+
+.ClubCardsGrid-Component ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.ClubCardsGrid-Component ul li {
+    display: inline-block;
+    margin: 1em;
+}

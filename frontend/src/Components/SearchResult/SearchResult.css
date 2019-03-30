@@ -1,0 +1,20 @@
+.SearchResult-Component {
+    background-color: #27251F;
+    color: #FFFFFF;
+}
+
+.SearchResult-Component .image-col {
+    /* background-image: url(../../../public/images/300x200.png); */
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.SearchResult-Component p {
+    margin: 0;
+}
+
+.SearchResult-Component .details-col {
+    margin: 1em 0;
+}
