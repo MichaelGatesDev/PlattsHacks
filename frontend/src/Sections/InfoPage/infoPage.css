@@ -1,0 +1,10 @@
+.infoContainerBackground {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+}
+
+.infoContainerBackground .infoContainerWhiteBackground {
+  background-color: white;
+  height: 100vh;
+}
