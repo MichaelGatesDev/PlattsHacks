@@ -1,10 +1,211 @@
-.infoContainerBackground {
+.infoContainer {
   background-color: red;
-  width: 100vw;
+  /* margin: 0 auto; */
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.infoContainerBackground .infoContainerWhiteBackground {
+.infoContainer .infoBox {
   background-color: white;
-  height: 100vh;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+  border-color: black;
+  border-style: solid;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.infoContainer .infoBox .leftColumn {
+  /* border-style: solid;
+  border-color: black; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 33% 33% 33%;
+}
+
+.infoContainer .infoBox .leftColumn #clubLogo {
+  margin-left: 10%;
+  margin-top: 3%;
+  grid-row: 1/2;
+  grid-column: 1;
+  height: 200px;
+  width: 200px;
+  background-image: url("../../Assets/rugbyBall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.infoContainer .infoBox .leftColumn .clubTitle {
+  font-size: 34px;
+  font-family: Haettenschweiler;
+  font-weight: 900;
+  color: red;
+  grid-row: 1;
+  grid-column: 1/3;
+  /* margin-right: 10%; */
+  margin-top: 12%;
+  padding-left: 25%;
+  text-align: center;
+}
+.infoContainer .infoBox .leftColumn .clubBreifSummary {
+  font-size: 24px;
+  font-family: Haettenschweiler;
+  font-weight: 900;
+  color: red;
+  grid-row: 1;
+  grid-column: 1/3;
+  /* margin-right: 10%; */
+  margin-top: 18%;
+  padding-left: 25%;
+  text-align: center;
+}
+.infoContainer .infoBox .leftColumn .clubDescription {
+  font-size: 22px;
+  font-family: Haettenschweiler;
+  font-weight: 900;
+  color: red;
+  margin-left: 5%;
+  margin-right: 10%;
+  margin-top: 10%;
+  grid-row: 2;
+  grid-column: 1/3;
+}
+.infoContainer .infoBox .leftColumn .leadershipBoxes {
+  grid-row: 3;
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.infoContainer .infoBox .leftColumn .leadershipBoxes .photoBoxContainer {
+  margin-right: 20px;
+}
+.infoContainer .infoBox .leftColumn .leadershipTitle {
+  grid-row: 2;
+  left: 0;
+}
+.infoContainer .infoBox .leftColumn .leadershipBoxes #officer1 {
+  /* border-style: solid;
+  border-color: red; */
+  height: 120px;
+  width: 130px;
+  margin-left: 40px;
+  background-image: url("../../Assets/officer1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.infoContainer .infoBox .leftColumn .leadershipBoxes #officer2 {
+  /* border-style: solid;
+  border-color: red; */
+  height: 120px;
+  width: 130px;
+  justify-self: center;
+  background-image: url("../../Assets/officer2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.infoContainer .infoBox .leftColumn .leadershipBoxes #officer3 {
+  /* border-style: solid;
+  border-color: red; */
+  height: 120px;
+  width: 130px;
+  justify-self: center;
+  background-image: url("../../Assets/officer3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.infoContainer .infoBox .rightColumn {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 60% 20%;
+}
+
+.infoContainer .infoBox .rightColumn .timesTitle {
+  font-size: 34px;
+  font-family: Haettenschweiler;
+  font-weight: 900;
+  color: red;
+  grid-row: 1;
+  grid-column: 1/3;
+  /* margin-right: 10%; */
+  /* margin-top: 4%; */
+  margin-bottom: 0;
+  text-align: center;
+}
+.infoContainer .infoBox .rightColumn .meetingTimes {
+  font-size: 24px;
+  font-family: Haettenschweiler;
+  font-weight: 900;
+  color: red;
+  grid-row: 1;
+  grid-column: 1/3;
+  /* margin-right: 10%; */
+  margin-top: 15%;
+  padding-left: 0%;
+  text-align: center;
+}
+.infoContainer .infoBox .rightColumn .calendarDiv {
+  /* border-style: solid;
+  border-color: green; */
+  /* background-image: url("../../Assets/calendarTemp.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+.infoContainer .infoBox .rightColumn .rightColumnButtons {
+  grid-row: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoContainer .infoBox .rightColumn .rightColumnButtons #imageButton {
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  height: 100px;
+  width: 100px;
+  justify-self: center;
+  border-radius: 100%;
+  margin-right: 20px;
+  margin-left: 14%;
+  background-image: url("../../Assets/images.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.infoContainer .infoBox .rightColumn .rightColumnButtons #calendarButton {
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  height: 100px;
+  width: 100px;
+  justify-self: center;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-image: url("../../Assets/calendar.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.infoContainer .infoBox .rightColumn .rightColumnButtons #forumButton {
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  height: 100px;
+  width: 100px;
+  justify-self: center;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-image: url("../../Assets/forum.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
