@@ -1,13 +1,11 @@
 <html>
 <head>
     <title>Create new organization</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="create_org.js"></script>
 </head>
 <body>
 
 
-<h1>Create a profile here</h1>
+<h1>Create an organization here</h1>
 <form id="create_profile" enctype="multipart/form-data" method="post" action="/create_org">
     <label>Name:</label>
     <input type="text" name="name" required>
@@ -21,9 +19,8 @@
     <label>Logo:</label>
     <input type="file" name="logo" accept="image/*" required>
 
-    <label>Email:</label>
-    <input type="text" name="email">
-
+    <br>
+    <br>
     <br>
 
     <label>Officer 1 Name:</label>
@@ -68,7 +65,38 @@
     <label>officer 4 portrait:</label>
     <input type="file" name="officer4picture" accept="image/*">
 
+    <br>
+    <br>
+    <br>
+
+    <label>Contact 1 type</label>
+    <input type="text" name="contact1type">
+    <label>Contact 1 URL</label>
+    <input type="text" name="contact1url">
+    <label>Contact 1 name</label>
+    <input type="text" name="contact1name">
+
+    <br>
+
+    <label>Contact 2 type</label>
+    <input type="text" name="contact2type">
+    <label>Contact 2 URL</label>
+    <input type="text" name="contact2url">
+    <label>Contact 2 name</label>
+    <input type="text" name="contact2name">
+
+    <br>
+
+    <label>Contact 3 type</label>
+    <input type="text" name="contact3type">
+    <label>Contact 3 URL</label>
+    <input type="text" name="contact3url">
+    <label>Contact 3 name</label>
+    <input type="text" name="contact3name">
+
     <input type="submit">
+
+
 </form>
 
 
