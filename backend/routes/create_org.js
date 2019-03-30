@@ -5,6 +5,7 @@ var fs = require('fs');
 
 var organization = organizationModels.orgModel;
 var officer = organizationModels.officerModel;
+var contact = organizationModels.contactModel;
 
 //Get create organization page
 router.get("/", function (req, res) {
@@ -18,7 +19,6 @@ router.post("/", function (req, res) {
 		if (err)
 			res.send(err);
 	});
-	
 	var logo = req.files.logo;
 	logo.mv(path, function (err) {
 		if (err)
@@ -29,7 +29,6 @@ router.post("/", function (req, res) {
 		if (err)
 			res.send(err);
 	});
-	
 	var officers = [];
 	if (req.body.officer1name && req.body.officer1role) {
 		var newOfficer = new officer({
@@ -45,8 +44,10 @@ router.post("/", function (req, res) {
 		});
 		
 		officers.push(newOfficer);
+	}else{
+		var newOfficer = new officer();
+		officers.push(newOfficer);
 	}
-	
 	if (req.body.officer2name && req.body.officer2role) {
 		var newOfficer = new officer({
 			name: req.body.officer2name,
@@ -61,8 +62,10 @@ router.post("/", function (req, res) {
 		});
 		
 		officers.push(newOfficer)
+	}else{
+		var newOfficer = new officer();
+		officers.push(newOfficer);
 	}
-	
 	if (req.body.officer3name && req.body.officer3role) {
 		var newOfficer = new officer({
 			name: req.body.officer3name,
@@ -77,8 +80,10 @@ router.post("/", function (req, res) {
 		});
 		
 		officers.push(newOfficer)
+	}else{
+		var newOfficer = new officer();
+		officers.push(newOfficer);
 	}
-	
 	if (req.body.officer4name && req.body.officer4role) {
 		var newOfficer = new officer({
 			name: req.body.officer4name,
@@ -93,20 +98,62 @@ router.post("/", function (req, res) {
 		});
 		
 		officers.push(newOfficer)
+	}else{
+		var newOfficer = new officer();
+		officers.push(newOfficer);
+	}
+	
+	var contacts = [];
+	if (req.body.contact1type && req.body.contact1url && req.body.contact1name) {
+		var newContact = new contact({
+			type: req.body.contact1type,
+			url: req.body.contact1url,
+			name: req.body.contact1name,
+		});
+		
+		contacts.push(newContact);
+	}else{
+		var newContact = new contact();
+		contacts.push(newContact);
+	}
+	if (req.body.contact2type && req.body.contact2url && req.body.contact2name) {
+		var newContact = new contact({
+			type: req.body.contact2type,
+			url: req.body.contact2url,
+			name: req.body.contact2name,
+		});
+		
+		contacts.push(newContact);
+	}else{
+		var newContact = new contact();
+		contacts.push(newContact);
+	}
+	if (req.body.contact3type && req.body.contact3url && req.body.contact3name) {
+		var newContact = new contact({
+			type: req.body.contact3type,
+			url: req.body.contact3url,
+			name: req.body.contact3name,
+		});
+		
+		contacts.push(newContact);
+	}else{
+		var newContact = new contact();
+		contacts.push(newContact);
 	}
 	
 	var newOrg = new organization({
-		email: req.body.email,
 		name: req.body.name,
 		description: req.body.description,
+		type: req.body.type,
 		officers: officers,
+		contacts: contacts,
 	});
 	newOrg.save(function (err) {
 		if (err){
 			res.send(err);
 		}
 		res.redirect("/");
-	})
+	});
 });
 
 module.exports = router;
