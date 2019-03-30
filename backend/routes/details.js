@@ -1,16 +1,16 @@
 var express = require('express');
+
 var router = express.Router();
 
 var organizationModels = require("../models/organization_models");
 
 var organization = organizationModels.orgModel;
 
-/* GET home page. */
-router.get('/', function(req, res) {
-	organization.find({}, function (err, organizations) {
+router.get('/:id', function (req, res) {
+	organization.find({_id : req.params.id}, function (err, org) {
 		if (err)
 			res.send(err);
-		res.json(organizations);
+		res.json(org)
 	})
 });
 
