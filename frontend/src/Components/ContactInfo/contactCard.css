@@ -1,0 +1,26 @@
+.contactCardContainer {
+  height: 20%;
+  width: 80%;
+  /* border-style: solid;
+  border-color: blue; */
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contactCardContainer .contactCardBox {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* border-style: solid;
+  border-color: green; */
+  align-items: center;
+}
+.contactCardContainer .facebookIcon {
+  height: 30px;
+  width: 30px;
+  padding-right: 50px;
+}
+.contactCardContainer .name {
+  justify-self: center;
+  border-style: solid;
+}

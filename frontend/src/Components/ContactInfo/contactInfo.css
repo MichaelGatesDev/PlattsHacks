@@ -1,0 +1,40 @@
+.contactContainer {
+  height: 400px;
+  width: 95%;
+  /* border-style: solid;
+  border-color: greenyellow; */
+
+  justify-content: center;
+  align-content: center;
+}
+.contactContainer .ContactBox {
+  border-style: solid;
+  border-color: orange;
+  height: 95%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactContainer .ContactBox .cardContainer {
+  /* border-style: solid;
+  border-color: black; */
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactContainer .ContactBox .contactTitle {
+  font-size: 36px;
+  font-family: Haettenschweiler;
+  font-weight: 900;
+  color: red;
+  margin-top: 0;
+  text-align: center;
+}
+.contactContainer .ContactBox .contactCardContainer {
+  margin-top: 20px;
+}
