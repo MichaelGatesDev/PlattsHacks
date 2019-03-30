@@ -1,0 +1,37 @@
+.imageContainer {
+  height: 400px;
+  width: 95%;
+  /* border-style: solid;
+  border-color: purple; */
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageContainer .gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  height: 100%;
+  grid-gap: 10px;
+}
+img {
+  height: auto;
+  width: 100%;
+  object-fit: fill;
+}
+
+.imageContainer .gridContainer .column1 .pic1 {
+  grid-row: 1;
+  object-position: center;
+}
+.imageContainer .gridContainer .column1 .pic2 {
+  grid-row: 1;
+}
+.imageContainer .gridContainer .column2 .pic3 {
+  grid-row: 1;
+}
+
+.imageContainer .gridContainer .column2 .pic4 {
+  grid-row: 2;
+}
