@@ -1,0 +1,12 @@
+#home-section {
+    font-family: 'Roboto';
+    background-color: #C8102E;
+    min-height: 100vh;
+}
+
+#home-section h2 {
+    color: #FFFFFF;
+
+    padding: 0.25em 0;
+    font-size: 3em;
+}
