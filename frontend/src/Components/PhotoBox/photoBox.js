@@ -2,9 +2,9 @@ import React from "react";
 
 import "./photoBox.css";
 
-const PhotoBox = ({ id }) => {
+const PhotoBox = props => {
   return (
-    <div className="photoBoxContainer" id={id}>
+    <div className="photoBoxContainer" id={props.id} onClick={props.onClick}>
       <div className="photoBox" />
     </div>
   );

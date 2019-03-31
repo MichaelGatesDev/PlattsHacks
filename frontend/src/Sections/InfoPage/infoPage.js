@@ -10,11 +10,38 @@ class InfoPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      galleryVisible: true,
-      calendarVisible: false,
-      infoVisible: false
+      galleryVisible: "false",
+      calendarVisible: "false",
+      infoVisible: "true"
     };
+    this.onclickhandler = this.onclickhandler.bind(this);
   }
+
+  onclickhandler(e) {
+    console.log("clicked");
+    if (e.target.id === "imageButton") {
+      this.setState({
+        galleryVisible: "true",
+        calendarVisible: "false",
+        infoVisible: "false"
+      });
+    }
+    if (e.target.id === "calendarButton") {
+      this.setState({
+        galleryVisible: "false",
+        calendarVisible: "true",
+        infoVisible: "false"
+      });
+    }
+    if (e.target.id === "forumButton") {
+      this.setState({
+        galleryVisible: "false",
+        calendarVisible: "false",
+        infoVisible: "true"
+      });
+    }
+  }
+
   render() {
     const { username } = this.state;
 
@@ -43,13 +70,14 @@ class InfoPage extends React.Component {
             <p className="timesTitle">Practice Times:</p>
             <p className="meetingTimes">Tues-Fri 8am-10:30am</p>
             <div className="calendarDiv">
-              {/* <Gallery /> */}
-              <Contact />
+              <Gallery visible={this.state.galleryVisible} />
+              <Contact visible={this.state.infoVisible} />
+              <Calendar visible={this.state.calendarVisible} />
             </div>
             <div className="rightColumnButtons">
-              <PhotoBox id="imageButton" />
-              <PhotoBox id="calendarButton" />
-              <PhotoBox id="forumButton" />
+              <PhotoBox id="imageButton" onClick={this.onclickhandler} />
+              <PhotoBox id="calendarButton" onClick={this.onclickhandler} />
+              <PhotoBox id="forumButton" onClick={this.onclickhandler} />
             </div>
           </div>
         </div>
