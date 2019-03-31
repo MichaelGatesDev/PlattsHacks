@@ -26,7 +26,7 @@ class ClubCard extends Component {
 
         return (
             <div className="ClubCard-Component">
-                <Link to={"clubs/" + this.props.club.id}>
+                <Link to={"clubs/" + this.props.club._id}>
                     <div className="card">
                         <img className="card-img-top" src={coverImage} alt={this.props.club.name} />
                         <div className="card-body">
