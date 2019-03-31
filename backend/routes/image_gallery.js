@@ -38,7 +38,7 @@ router.post("/:id", function (req, res) {
 				res.send(err)
 		});
 		
-		res.redirect('/');
+		res.redirect('/details/' + req.params.id);
 	})
 });
 

@@ -55,7 +55,7 @@ router.post("/", function (req, res) {
 		});
 		
 		var path = './assets/images/' + folder_name + '/officers/officer2.jpg';
-		var portrait = req.files.officer1picture;
+		var portrait = req.files.officer2picture;
 		portrait.mv(path, function (err) {
 			if (err)
 				res.send(err);
@@ -73,7 +73,7 @@ router.post("/", function (req, res) {
 		});
 		
 		var path = './assets/images/' + folder_name + '/officers/officer3.jpg';
-		var portrait = req.files.officer1picture;
+		var portrait = req.files.officer3picture;
 		portrait.mv(path, function (err) {
 			if (err)
 				res.send(err);
@@ -91,7 +91,7 @@ router.post("/", function (req, res) {
 		});
 		
 		var path = './assets/images/' + folder_name + '/officers/officer4.jpg';
-		var portrait = req.files.officer1picture;
+		var portrait = req.files.officer4picture;
 		portrait.mv(path, function (err) {
 			if (err)
 				res.send(err);
@@ -153,7 +153,7 @@ router.post("/", function (req, res) {
 		if (err){
 			res.send(err);
 		}
-		res.redirect("/");
+		res.redirect("/api/");
 	});
 });
 
