@@ -20,19 +20,22 @@ class ClubsDisplayBox extends Component {
     }
 
     componentDidMount() {
+
+        this.fetchClubs();
+
         var exampleA = {
             id: 'a',
-            title: "Baseball Club",
+            name: "Baseball Club",
             type: "Sports"
         };
         var exampleB = {
             id: 'b',
-            title: "V-Nation",
+            name: "V-Nation",
             type: "Cultural"
         };
         var exampleC = {
             id: 'c',
-            title: "Software Engineering Club",
+            name: "Software Engineering Club",
             type: "Department"
         };
         let examples = [
@@ -41,7 +44,22 @@ class ClubsDisplayBox extends Component {
             exampleA, exampleB, exampleC,
         ];
 
-        this.setState({ clubs: examples });
+        // this.setState({ clubs: examples });
+    }
+
+    fetchClubs() {
+        fetch('/api')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    clubs: [...this.state.clubs, ...data],
+                }, function () {
+                    console.log(data);
+                });
+            }).catch((error) => {
+                console.log("Failed to fetch clubs");
+                console.log(error);
+            });
     }
 
     onSearchUpdate(newValue) {
@@ -58,12 +76,12 @@ class ClubsDisplayBox extends Component {
         var filteredClubs = _(this.state.clubs).chain().sortBy(function (club) {
             return club.type;
         }, this).sortBy(function (club) {
-            return club.title;
+            return club.name;
         }, this).value();
 
         for (const q of queries) {
             filteredClubs = filteredClubs.filter(function (club) {
-                return (club.title.toLowerCase().includes(q) || club.type.toLowerCase().includes(q));
+                return (club.name.toLowerCase().includes(q) || club.type.toLowerCase().includes(q));
             }, this);
         }
 
