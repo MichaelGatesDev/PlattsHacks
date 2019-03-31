@@ -1,0 +1,25 @@
+#section-club-search {
+    background-color: #C8102E;
+}
+
+#section-club-search {
+    min-height: 100vh;
+}
+
+#section-club-search .section-header {
+    height: 15vh;
+}
+
+#section-club-search .header {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+
+    color: #FFFFFF;
+
+    padding: 0.25em 0;
+}
+
+#section-club-search .section-body {
+    height: 85vh;
+}

@@ -1,0 +1,25 @@
+#section-calendar {
+    background-color: #C8102E;
+}
+
+#section-calendar {
+    min-height: 100vh;
+}
+
+#section-calendar .section-header {
+    height: 15vh;
+}
+
+#section-calendar .header {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+
+    color: #FFFFFF;
+
+    padding: 0.25em 0;
+}
+
+#section-calendar .section-body {
+    height: 85vh;
+}

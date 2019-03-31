@@ -1,12 +1,9 @@
-#home-section {
-    font-family: 'Roboto';
-    background-color: #C8102E;
-    min-height: 100vh;
+.banner-carousel img {
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
 }
 
-#home-section h2 {
-    color: #FFFFFF;
-
-    padding: 0.25em 0;
-    font-size: 3em;
+#section-landing h2 {
+    padding: 0.5em 0;
 }

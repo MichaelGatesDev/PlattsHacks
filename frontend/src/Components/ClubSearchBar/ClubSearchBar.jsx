@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import './SearchBar.css';
+import './ClubSearchBar.css';
 
-class SearchBar extends Component {
+class ClubSearchBar extends Component {
 
     constructor(props) {
         super(props);
@@ -23,7 +23,7 @@ class SearchBar extends Component {
     render() {
 
         return (
-            <div className="SearchBar-Component">
+            <div className="ClubSearchBar-Component">
                 <input
                     type={"text"}
                     placeholder={this.props.placeholder}
@@ -36,4 +36,4 @@ class SearchBar extends Component {
     }
 }
 
-export default SearchBar;
+export default ClubSearchBar;
