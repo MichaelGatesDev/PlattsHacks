@@ -22,6 +22,7 @@ var organizationSchema = new mongoose.Schema({
 	description: String,
 	officers: [officerSchema],
 	contacts: [contactSchema],
+	image_count: Number,
 });
 
 exports.orgModel = mongoose.model('organization', organizationSchema);

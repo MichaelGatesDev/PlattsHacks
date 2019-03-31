@@ -142,6 +142,7 @@ router.post("/", function (req, res) {
 	}
 	
 	var newOrg = new organization({
+		image_count: 0,
 		name: req.body.name,
 		description: req.body.description,
 		type: req.body.type,

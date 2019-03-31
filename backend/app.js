@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var detailRouter = require('./routes/details');
 var create_orgRouter = require('./routes/create_org');
 var modify_orgRouter = require('./routes/mod_org');
+var add_imagesRouter = require("./routes/image_gallery");
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/details', detailRouter);
 app.use('/create_org', create_orgRouter);
 app.use('/modify_org', modify_orgRouter);
+app.use('/add_images', add_imagesRouter);
 
 
 
