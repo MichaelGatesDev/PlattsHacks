@@ -1,8 +1,11 @@
-.ClubCardsGrid-Component {}
+.ClubCardsGrid-Component {
+    text-align: left;
+    margin: 0 auto;
+}
 
 .ClubCardsGrid-Component ul {
-    text-align: center;
-    list-style-type: none;
+    /* text-align: center; */
+    /* list-style-type: none; */
     padding: 0;
 }
 
