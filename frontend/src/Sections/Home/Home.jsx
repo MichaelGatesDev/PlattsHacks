@@ -1,11 +1,9 @@
-
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom'
+
 import './Home.css';
 
-import SearchBar from "../../Components/SearchBar/SearchBar";
-import ClubCardsGrid from "../../Components/ClubCardsGrid/ClubCardsGrid";
-
-var _ = require('underscore');
+import AdCard from "../../Components/AdCard/AdCard";
 
 class Home extends Component {
 
@@ -14,34 +12,10 @@ class Home extends Component {
 
         this.state = {
             loading: true,
-            searchValue: '',
-            clubs: [],
         };
-
-        this.onSearchUpdate = this.onSearchUpdate.bind(this);
     }
 
     componentDidMount() {
-        var exampleA = {
-            id: 'a',
-            title: "Baseball Club",
-            type: "Sports"
-        };
-        var exampleB = {
-            id: 'b',
-            title: "V-Nation",
-            type: "Cultural"
-        };
-        var exampleC = {
-            id: 'c',
-            title: "Software Engineering Club",
-            type: "Department"
-        };
-        let examples = [
-            exampleA, exampleB, exampleC
-        ];
-
-        this.setState({ clubs: examples });
     }
 
     // fetchData(){
@@ -59,13 +33,6 @@ class Home extends Component {
     //         });
     // }
 
-    onSearchUpdate(newValue) {
-        this.setState({
-            searchValue: newValue
-        });
-    }
-
-
     render() {
 
         // if (this.state.loading) {
@@ -73,41 +40,56 @@ class Home extends Component {
         //     return <p>Loading...</p>
         // }
 
-        var query = this.state.searchValue;
-        var queries = query.split(" ");
-
-        var filteredClubs = _(this.state.clubs).chain().sortBy(function (club) {
-            return club.type;
-        }, this).sortBy(function (club) {
-            return club.title;
-        }, this).value();
-
-        for (const q of queries) {
-            filteredClubs = filteredClubs.filter(function (club) {
-                return (club.title.toLowerCase().includes(q) || club.type.toLowerCase().includes(q));
-            }, this);
-        }
-
         return (
-            <section id="home-section">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col text-center">
-                            <h2>Clubs &amp; Organizations</h2>
+            <section id="section-landing">
+                <div className="banner-carousel">
+                    <div className="carousel slide" data-ride="carousel">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <img src="/images/300x200.png" alt="First slide" />
+                            </div>
+                            <div className="carousel-item">
+                                <img src="/images/300x200.png" alt="First slide" />
+                            </div>
+                            <div className="carousel-item">
+                                <img src="/images/300x200.png" alt="First slide" />
+                            </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-lg-9 mx-auto">
-                            <SearchBar
-                                onChange={this.onSearchUpdate}
-                            />
+                </div>
+                <div className="container">
+                    <div className="text-center">
+
+                        <h2>Get Involved</h2>
+
+                        <div className="row">
+                            <div className="col">
+                                <AdCard
+                                    title={"Search for a Club"}
+                                    description="Looking for a specific club but don't know how to find it? Allow our neat search tool to assist you."
+                                    href={"/search"}
+                                    buttonText={"Search"}
+                                />
+                            </div>
+                            <div className="col">
+                                <AdCard
+                                    title={"Upcoming Events"}
+                                    description="Curious what's poppin' this week in the burgh? Check out events calendar for times and dates of events this week!"
+                                    href={"/calendar"}
+                                    buttonText={"Calendar"}
+                                />
+                            </div>
+                            <div className="col">
+                                <AdCard
+                                    title={"Placeholder"}
+                                    description="Functionality TBD"
+                                    href={"/"}
+                                    buttonText={"TBD"}
+                                />
+                            </div>
                         </div>
+
                     </div>
-
-                    <ClubCardsGrid
-                        clubs={filteredClubs}
-                    />
-
                 </div>
             </section>
         );
