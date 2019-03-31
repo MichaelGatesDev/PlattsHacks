@@ -1,9 +1,25 @@
-.banner-carousel img {
-    height: 40vh;
+#section-landing {
+    height: 100vh;
     width: 100%;
-    object-fit: cover;
+    background: url(../../../public/images/example-title.jpg) no-repeat center center fixed;
+    background-size: 100%;
 }
 
 #section-landing h2 {
-    padding: 0.5em 0;
+    letter-spacing: 0.5em;
+    font-family: 'Oswald';
+    font-weight: bold;
+    padding: 1em 0;
+    color: white;
+    font-size: 5em;
+}
+
+#section-landing .container {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.tinted {
+    background-color: #000000CC;
 }

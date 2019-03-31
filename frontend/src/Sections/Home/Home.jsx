@@ -42,53 +42,39 @@ class Home extends Component {
 
         return (
             <section id="section-landing">
-                <div className="banner-carousel">
-                    <div className="carousel slide" data-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src="/images/300x200.png" alt="First slide" />
+                <div className="tinted">
+                    <div className="container">
+                        <div className="text-center">
+                            <h2>Club Hub</h2>
+                            <hr/>
+                            <div className="row">
+                                <div className="col">
+                                    <AdCard
+                                        title={"Search for a Club"}
+                                        description="Looking for a specific club but don't know how to find it? Allow our neat search tool to assist you."
+                                        href={"/search"}
+                                        buttonText={"Search"}
+                                    />
+                                </div>
+                                <div className="col">
+                                    <AdCard
+                                        title={"Upcoming Events"}
+                                        description="Curious what's poppin' this week in the burgh? Check out events calendar for times and dates of events this week!"
+                                        href={"/calendar"}
+                                        buttonText={"Calendar"}
+                                    />
+                                </div>
+                                <div className="col">
+                                    <AdCard
+                                        title={"Placeholder"}
+                                        description="Functionality TBD"
+                                        href={"/"}
+                                        buttonText={"TBD"}
+                                    />
+                                </div>
                             </div>
-                            <div className="carousel-item">
-                                <img src="/images/300x200.png" alt="First slide" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src="/images/300x200.png" alt="First slide" />
-                            </div>
+
                         </div>
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="text-center">
-
-                        <h2>Get Involved</h2>
-
-                        <div className="row">
-                            <div className="col">
-                                <AdCard
-                                    title={"Search for a Club"}
-                                    description="Looking for a specific club but don't know how to find it? Allow our neat search tool to assist you."
-                                    href={"/search"}
-                                    buttonText={"Search"}
-                                />
-                            </div>
-                            <div className="col">
-                                <AdCard
-                                    title={"Upcoming Events"}
-                                    description="Curious what's poppin' this week in the burgh? Check out events calendar for times and dates of events this week!"
-                                    href={"/calendar"}
-                                    buttonText={"Calendar"}
-                                />
-                            </div>
-                            <div className="col">
-                                <AdCard
-                                    title={"Placeholder"}
-                                    description="Functionality TBD"
-                                    href={"/"}
-                                    buttonText={"TBD"}
-                                />
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
