@@ -31,7 +31,7 @@ class Home extends Component {
                                 <div className="section-body">
                                     <iframe
                                         className="calendar"
-                                        src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=plattsburgh.edu_dklnisut97n2gr0o08uc2d2ock%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"
+                                        src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=plattsburgh.edu_prihlasc20dv36m8m0tlgu0458%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FNew_York"
                                         style={{ borderWidth: 0, width: '100%', height: '80vh' }}
                                         frameBorder="0"
                                         scrolling="no"
