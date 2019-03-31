@@ -21,7 +21,7 @@ router.post("/:id", function (req, res) {
 		if (err)
 			res.send(err);
 		
-		var folder_name = org.name.replace(' ', '_');
+		var folder_name = org.name.replace(/\s/g, '_');
 		var path = './assets/images/' + folder_name + '/logo.jpg';
 		fs.mkdir('./assets/images/' + folder_name, {recursive: true}, (err) => {
 			if (err)
