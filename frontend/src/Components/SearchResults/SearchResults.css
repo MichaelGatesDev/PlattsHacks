@@ -1,0 +1,11 @@
+.SearchResults-Component {
+    padding: 0 1em;
+    background-color: #27251F66;
+
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.SearchResults-Component .row {
+    margin: 1em 0;
+}

@@ -1,0 +1,8 @@
+.card {
+    background-color: #ffffffCC;
+}
+
+.card-text {
+    height: 100px;
+    overflow: hidden;
+}

@@ -1,0 +1,53 @@
+.ClubCard-Component {
+    transition: 0.15s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.ClubCard-Component:hover {
+    filter: grayscale(0%);
+}
+
+.ClubCard-Component a,
+.ClubCard-Component a:hover {
+    text-decoration: none;
+}
+
+.ClubCard-Component a {
+    color: #333333;
+}
+
+.ClubCard-Component a:hover {
+    color: #000000;
+}
+
+.ClubCard-Component img {
+    /* background: url(/images/300x200.png) repeat; */
+    background-color: #FFFFFF;
+
+    width: 300px;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.ClubCard-Component .card {
+    width: 300px;
+}
+
+.ClubCard-Component .card-body {
+    text-align: center;
+}
+
+.ClubCard-Component .card-body .card-title {
+    font-size: 1.15em;
+}
+
+.ClubCard-Component .card-body .card-title,
+.ClubCard-Component .card-body .card-subtitle {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.ClubCard-Component .card-body .card-subtitle {
+    margin-bottom: 0.25em;
+}

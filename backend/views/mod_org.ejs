@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>Create new organization</title>
+</head>
+<body>
+
+
+<h1>modify information of an organization here</h1>
+<h1>Organization name: <%= organization.name %></h1>
+<h2>Organization type: <%= organization.type %></h2>
+<form enctype="multipart/form-data" method="post">
+    <label>Description: </label>
+    <input type="text" name="description" value="<%= organization.description %>" required>
+
+    <label for="Type">organization type:</label>
+    <input type="text" name="type" required value="<%= organization.type %>">
+
+    <label>Logo:</label>
+    <input type="file" name="logo" accept="image/*">
+
+    <br>
+    <br>
+    <br>
+
+    <label>Officer 1 Name:</label>
+    <input type="text" name="officer1name" value="<%= organization.officers[0].name %>" required>
+    <label>Officer 1 role:</label>
+    <input type="text" name="officer1role" value="<%= organization.officers[0].role%>" required>
+    <label>officer 1 portrait:</label>
+    <input type="file" name="officer1picture" accept="image/*">
+
+    <br>
+
+    <label>Officer 2 Name:</label>
+    <input type="text" name="officer2name" value="<%= organization.officers[1].name %>">
+    <label>Officer 2 role:</label>
+    <input type="text" name="officer2role" value="<%= organization.officers[1].role%>">
+    <label>officer 2 portrait:</label>
+    <input type="file" name="officer2picture" accept="image/*">
+
+    <br>
+
+    <label>Officer 3 Name:</label>
+    <input type="text" name="officer3name" value="<%= organization.officers[2].name %>">
+    <label>Officer 3 role:</label>
+    <input type="text" name="officer3role" value="<%= organization.officers[2].role%>">
+    <label>officer 3 portrait:</label>
+    <input type="file" name="officer3picture" accept="image/*">
+
+    <br>
+
+    <label>Officer 4 Name:</label>
+    <input type="text" name="officer4name" value="<%= organization.officers[3].name %>">
+    <label>Officer 4 role:</label>
+    <input type="text" name="officer4role" value="<%= organization.officers[3].role%>">
+    <label>officer 4 portrait:</label>
+    <input type="file" name="officer4picture" accept="image/*">
+
+    <br>
+    <br>
+    <br>
+
+    <label>Contact 1 type</label>
+    <input type="text" name="contact1type" value="<%=organization.contacts[0].type%>">
+    <label>Contact 1 URL</label>
+    <input type="text" name="contact1url" value="<%=organization.contacts[0].url%>">
+    <label>Contact 1 name</label>
+    <input type="text" name="contact1name" value="<%=organization.contacts[0].name%>">
+
+    <br>
+
+    <label>Contact 2 type</label>
+    <input type="text" name="contact2type" value="<%=organization.contacts[1].type%>">
+    <label>Contact 2 URL</label>
+    <input type="text" name="contact2url" value="<%=organization.contacts[1].url%>">
+    <label>Contact 2 name</label>
+    <input type="text" name="contact2name" value="<%=organization.contacts[1].name%>">
+
+    <br>
+
+    <label>Contact 3 type</label>
+    <input type="text" name="contact3type" value="<%=organization.contacts[2].type%>">
+    <label>Contact 3 URL</label>
+    <input type="text" name="contact3url" value="<%=organization.contacts[2].url%>">
+    <label>Contact 3 name</label>
+    <input type="text" name="contact3name" value="<%=organization.contacts[2].name%>">
+
+    <input type="submit">
+
+</form>
+
+
+</body>
