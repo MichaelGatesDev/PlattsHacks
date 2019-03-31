@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://test:test@cluster0-mlt9k.mongodb.net/plattshack?retryWrites=true");
+mongoose.connect("mongodb+srv://test:test@cluster0-mlt9k.mongodb.net/plattshack?retryWrites=true").then(function () {}).catch(function (err) {
+	console.log(err);
+});
 
 var officerSchema = new mongoose.Schema({
 	name: String,
