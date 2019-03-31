@@ -1,0 +1,49 @@
+.left-side {
+  padding: 1em;
+  /* background-color: cyan; */
+  min-height: 90vh;
+}
+
+.left-side h2,
+.left-side h3 {
+  text-transform: capitalize;
+}
+
+.left-side h2 {
+  font-weight: bold;
+}
+
+
+.left-side .description {
+  padding: 1em 0;
+}
+
+.left-side {
+  padding: 1em;
+}
+
+.club-logo {
+  width: 100px;
+  object-fit: cover;
+}
+
+.right-side {
+  padding: 1em;
+  /* background-color: lime; */
+  min-height: 90vh;
+}
+
+
+
+.nav-buttons {
+  list-style-type: none;
+}
+
+.circular-button {
+  display: inline-block;
+  margin: 0 1em;
+  background-color: red;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+}

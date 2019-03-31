@@ -7,6 +7,7 @@
   justify-content: center;
   align-content: center;
 }
+
 .contactContainer .ContactBox {
   border-style: solid;
   border-color: orange;
@@ -16,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .contactContainer .ContactBox .cardContainer {
   /* border-style: solid;
   border-color: black; */
@@ -35,6 +37,7 @@
   margin-top: 0;
   text-align: center;
 }
+
 .contactContainer .ContactBox .contactCardContainer {
   margin-top: 20px;
 }

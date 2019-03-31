@@ -15,10 +15,15 @@ class ClubCard extends Component {
     componentDidMount() {
     }
 
-    getInternalIDFromName(name){
+
+    getLogo() {
+        return "images/" + this.getInternalIDFromName(this.props.club.name) + "/logo.jpg";
+    }
+
+    getInternalIDFromName(name) {
         return name.replace(/\s/g, '_');
     }
-    
+
     render() {
 
         var coverImage = "images/" + this.getInternalIDFromName(this.props.club.name) + "/logo.jpg";

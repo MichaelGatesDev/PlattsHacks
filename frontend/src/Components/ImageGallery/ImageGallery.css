@@ -21,7 +21,7 @@ img {
   object-fit: fill;
 }
 
-.imageContainer .gridContainer .column1 .pic1 {
+/* .imageContainer .gridContainer .column1 .pic1 {
   grid-row: 1;
   object-position: center;
 }
@@ -34,4 +34,4 @@ img {
 
 .imageContainer .gridContainer .column2 .pic4 {
   grid-row: 2;
-}
+} */

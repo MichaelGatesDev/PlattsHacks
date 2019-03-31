@@ -1,0 +1,22 @@
+.ClubOfficer-Component {
+    text-align: center;
+    width: 150px;
+    margin: 0 2em;
+}
+
+.ClubOfficer-Component .title {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.ClubOfficer-Component p {
+    text-transform: capitalize;
+}
+
+.ClubOfficer-Component img {
+    border-radius: 0.25em;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}

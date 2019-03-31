@@ -17,27 +17,7 @@ class Search extends Component {
     componentDidMount() {
     }
 
-    // fetchData(){
-    //     fetch('/api/v1/clubs')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             this.setState({
-    //                 clubs: [...this.state.clubs, ...data],
-    //             }, function () {
-    //                 this.fetchAllImages();
-    //             });
-    //         }).catch((error) => {
-    //             console.log("Failed to fetch clubs");
-    //             console.log(error);
-    //         });
-    // }
-
     render() {
-
-        // if (this.state.loading) {
-        //     // return splashscreen
-        //     return <p>Loading...</p>
-        // }
 
         return (
             <Fragment>
