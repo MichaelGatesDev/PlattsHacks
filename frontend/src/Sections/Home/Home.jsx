@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom'
-
 import './Home.css';
 
 import AdCard from "../../Components/AdCard/AdCard";

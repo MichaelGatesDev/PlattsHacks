@@ -7,7 +7,7 @@ import "./App.css";
 import Home from './Sections/Home/Home';
 import Search from './Sections/Search/Search';
 import Calendar from './Sections/Calendar/Calendar';
-import InfoPage from "./Sections/InfoPage/infoPage";
+import InfoPage from "./Sections/InfoPage/InfoPage";
 
 class App extends Component {
   render() {
