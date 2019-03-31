@@ -21,7 +21,8 @@
 }
 
 .ClubCard-Component img {
-    background: url(/images/300x200.png) repeat;
+    /* background: url(/images/300x200.png) repeat; */
+    background-color: #FFFFFF;
 
     width: 300px;
     height: 200px;
