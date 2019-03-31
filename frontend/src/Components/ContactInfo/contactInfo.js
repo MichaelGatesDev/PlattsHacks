@@ -27,9 +27,9 @@ const Contact = ({ id }) => {
       <div className="ContactBox">
         <h2 className="contactTitle">Contact </h2>
         <div className="cardContainer">
-          <Card id="facebook" name="Facebook" />
-          <Card id="email" />
-          <Card id="website" />
+          <Card icon="facebook" name="Facebook" />
+          <Card icon="email" email="sunyRugby@plattsburgh.edu" />
+          <Card icon="website" website="www.sunyRugby.com" />
         </div>
       </div>
     </div>
