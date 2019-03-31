@@ -13,7 +13,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", function (req, res) {
-	var folder_name = req.body.name.replace(' ', '_');
+	var folder_name = req.body.name.replace(/\s/g, '_');
 	var path = './assets/images/' + folder_name + '/logo.jpg';
 	fs.mkdir('./assets/images/' + folder_name, {recursive: true}, (err) => {
 		if (err)
